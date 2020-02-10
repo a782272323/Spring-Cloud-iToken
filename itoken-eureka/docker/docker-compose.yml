@@ -1,0 +1,15 @@
+version: '2'
+services:
+  itoken-eureka:
+    restart: always
+    image: itoken-eureka
+    container_name: itoken-eureka
+    ports:
+      - 8761:8761
+    volumes:
+      - /usr/local/docker/itoken-volumes/itoken-eureka-volumes
+    networks:
+      - eureka1_network
+#配置网络
+networks:
+  eureka1_network:

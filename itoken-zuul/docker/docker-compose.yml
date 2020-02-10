@@ -1,0 +1,15 @@
+version: '2'
+services:
+  itoken-zuul:
+    restart: always
+    image: itoken-zuul
+    container_name: itoken-zuul
+    ports:
+      - 8769:8769
+    volumes:
+      - /usr/local/docker/itoken-volumes/itoken-zuul-volumes
+    networks:
+      - zuul_network
+#配置网络-
+networks:
+  zuul_network:

@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: itoken-config
+  #SpringBootAdmin客户端配置
+  boot:
+    admin:
+      client:
+        url: http://203.195.249.41:8084
+  #分布式配置中心配置
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: http://106.13.207.61:6001/itoken/itoken-cloud-config.git
+          search-paths: respo
+          username: 782272323@qq.com
+          password: LHBlhb5201314..
+  zipkin:
+    base-url: http://203.195.249.41:9411
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://203.195.249.41:8761/eureka/,http://203.195.249.41:8861/eureka/,http://203.195.249.41:8961/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info

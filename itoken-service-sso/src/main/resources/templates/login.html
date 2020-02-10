@@ -1,0 +1,100 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=dege">
+    <title>iToken | 单点登录</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" th:href="@{{adminlte}/bower_components/bootstrap/dist/css/bootstrap.min.css(adminlte=${adminlte})}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{{adminlte}/bower_components/font-awesome/css/font-awesome.min.css(adminlte=${adminlte})}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" th:href="@{{adminlte}/bower_components/Ionicons/css/ionicons.min.css(adminlte=${adminlte})}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{{adminlte}/dist/css/AdminLTE.min.css(adminlte=${adminlte})}">
+    <!-- iCheck -->
+    <link rel="stylesheet" th:href="@{{adminlte}/plugins/iCheck/square/blue.css(adminlte=${adminlte})}">
+
+</head>
+
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <b>iToken | </b>单点登录</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <!-- 使用Thymeleaf判断的语法包裹情况起来 -->
+        <th:block th:if="${tbSysUser != null}">
+            <p class="login-box-msg">欢迎 <span th:text="${tbSysUser.userName}"></span> 登录</p>
+        </th:block>
+
+        <th:block th:if="${tbSysUser == null}">
+            <p class="login-box-msg">欢迎管理员登录</p>
+
+            <form action="/login" method="post">
+                <input type="hidden" name="url" th:value="${url}">
+
+                <!-- TODO 这里使用了 Thymeleaf的模版引擎语法，有空补个笔记 -->
+                <div class="alert alert-danger alert-dismissable" th:if="${message != null}">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                    <span th:text="${message}"></span>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <input name="loginCode" type="email" class="form-control" placeholder="邮箱">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input name="password" type="password" class="form-control" placeholder="密码">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
+                            <label>
+                                <input type="checkbox"> 记住我
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+
+            <a href="#">忘记密码 ？</a><br>
+            <a href="register.html" class="text-center">注册</a>
+        </th:block>
+
+
+
+    </div>
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery 3 -->
+<!--<script src="http://172.16.253.140:6005/adminlte/v2.4.3/bower_components/jquery/dist/jquery.min.js"></script>-->
+<script th:src="@{{adminlte}/bower_components/jquery/dist/jquery.min.js(adminlte=${adminlte})}"></script>
+<!--<script th:src=""></script>-->
+<!-- Bootstrap 3.3.7 -->
+<!--<script src="http://172.16.253.140:6005/adminlte/v2.4.3/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<script th:src="@{{adminlte}/bower_components/bootstrap/dist/js/bootstrap.min.js(adminlte=${adminlte})}"></script>
+<!-- iCheck -->
+<!--<script src="http://172.16.253.140:6005/adminlte/v2.4.3/plugins/iCheck/icheck.min.js"></script>-->
+<script th:src="@{{adminlte}/plugins/iCheck/icheck.min.js(adminlte=${adminlte})}"></script>
+<script>
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' /* optional */
+        });
+    });
+</script>
+</body>
+</html>

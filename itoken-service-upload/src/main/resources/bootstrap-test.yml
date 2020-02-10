@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://203.195.249.41:8888
+      name: itoken-client-eureka, itoken-client-zipkin, itoken-client-admin, itoken-service-upload
+      label: master
+      profile: test

@@ -1,0 +1,15 @@
+version: '2'
+services:
+  itoken-zipkin:
+    restart: always
+    image: itoken-zipkin
+    container_name: itoken-zipkin
+    ports:
+      - 9411:9411
+    volumes:
+      - /usr/local/docker/itoken-volumes/itoken-zipkin-volumes
+    networks:
+      - zipkin_network
+#配置网络-
+networks:
+  zipkin_network:

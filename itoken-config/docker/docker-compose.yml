@@ -1,0 +1,15 @@
+version: '2'
+services:
+  itoken-config:
+    restart: always
+    image: itoken-config
+    container_name: itoken-config
+    ports:
+      - 8888:8888
+    volumes:
+      - /usr/local/docker/itoken-volumes/itoken-config-volumes
+    networks:
+      - config_network
+#配置网络
+networks:
+  config_network:

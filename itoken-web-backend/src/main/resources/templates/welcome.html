@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>iToken - 管理后台</title>
+    <!-- 引用了头文件 -->
+    <th:block th:include="includes/head :: head"></th:block>
+
+    <link rel="stylesheet" th:href="@{{adminlte}/plugins/dropzone/dropzone.css(adminlte=${adminlte})}" />
+    <link rel="stylesheet" th:href="@{{adminlte}/plugins/dropzone/min/basic.min.css(adminlte=${adminlte})}" />
+    <link rel="stylesheet" th:href="@{{adminlte}/plugins/wangEditor/wangEditor.min.css(adminlte=${adminlte})}" />
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- TODO 页面补全，把ssm的视频过一遍再回来看文章消费者服务的增删查改和补全页面 -->
+
+<section class="content-header">
+    <h1>
+        欢迎
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a> </li>
+        <li class="active">控制面板</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-info">
+
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+
+<th:block th:include="includes/foot :: foot"></th:block>
+<script th:src="@{{adminlte}/plugins/dropzone/min/dropzone.min.js(adminlte=${adminlte})}"></script>
+<script th:src="@{{adminlte}/plugins/wangEditor/wangEditor.min.js(adminlte=${adminlte})}"></script>
+
+</body>
+</html>

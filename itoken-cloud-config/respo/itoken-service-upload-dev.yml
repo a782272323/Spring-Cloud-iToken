@@ -1,0 +1,15 @@
+#指定服务的名字
+spring:
+  application:
+    name: itoken-service-upload
+
+#端口号
+server:
+  port: 8505
+
+# FastDFS 配置
+fastdfs.base.url: http://172.16.253.140:8888/
+storage:
+  type: fastdfs
+  fastdfs:
+    tracker_server: 172.16.253.140:22122

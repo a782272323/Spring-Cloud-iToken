@@ -1,0 +1,9 @@
+#指定服务的名字
+spring:
+  application:
+    name: itoken-service-redis
+
+#端口号
+server:
+  port: 8502
+

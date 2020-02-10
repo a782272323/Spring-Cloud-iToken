@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: itoken-zipkin
+
+server:
+  port: 9411 #Zipkin默认端口
+
+management: #2.10.1版本增加的配置
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+
+

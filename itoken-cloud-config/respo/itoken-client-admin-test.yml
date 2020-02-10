@@ -1,0 +1,17 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://203.195.249.41:8084
+
+#Spring Boot Admin Server的配置
+#这样写才能被服务监控给监控着
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        # 注意：此处在视频里是 include: ["health", "info"] 但已无效了，请修改
+        include: health,info

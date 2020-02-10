@@ -1,0 +1,21 @@
+#指定服务的名字
+spring:
+  application:
+    name: itoken-eureka
+
+#端口号
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: 172.16.253.139 #eureka的地址
+  client:
+    #表示是否将自己注册到Eureka，因为要构建集群，需要将自己注册到集群，所以应该开启
+    registerWithEureka: true #这两个配置为false时是服务端，否则为客户端
+    #表示是否从 Eureka 获取注册信息，如果是单一节点，不需要同步其他 Eureka节点，则可以设置为false，
+    #但此处为集群，应该设置为true
+    fetchRegistry: true
+    serviceUrl: #设置eureka地址
+      #开启集群的话，就多个eureka的ip：端口，一般是端口不同
+      defaultZone: http://172.16.253.139:8761/eureka/,http://172.16.253.139:8861/eureka/,http://172.16.253.139:8961/eureka/

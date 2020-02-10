@@ -1,0 +1,9 @@
+#指定服务的名字
+spring:
+  application:
+    name: itoken-web-admin
+
+#端口号
+server:
+  port: 8601
+

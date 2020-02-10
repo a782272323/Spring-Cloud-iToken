@@ -1,0 +1,21 @@
+#指定服务的名字
+spring:
+  application:
+    name: itoken-service-sso
+  #数据库数据源的配置
+  datasource:
+    druid:
+      url: jdbc:mysql://47.95.206.128:3306/itoken-service-admin?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.jdbc.Driver
+
+#端口号
+server:
+  port: 8503
+

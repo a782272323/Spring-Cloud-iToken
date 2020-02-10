@@ -1,0 +1,11 @@
+#mybatis配置
+mybatis:
+  # 开启二级缓存
+  configuration:
+    cache-enabled: true
+  # 实体类的存放路径，如：com.funtl.hello.spring.boot.entity
+  type-aliases-package: learn.lhb.itoken.commom.domain
+  mapper-locations: classpath:mapper/*.xml
+
+
+

@@ -1,0 +1,5 @@
+#通用的主机地址配置
+
+hosts:
+  sso: http://localhost:8503
+  #web-posts: http://localhost:8602

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: itoken-zuul
+
+server:
+  port: 8769
+
+zuul:
+  routes:
+    #管理员服务网关配置
+    backend-admin:
+      path: /backend/admin/**
+      serviceId: itoken-web-admin
+    #文章服务网关配置
+    backend-posts:
+      path: /backend/posts/**
+      serviceId: itoken-web-posts
+
+#zuul:
+  #routes: #路由
+    #自定义，根据项目需要
+

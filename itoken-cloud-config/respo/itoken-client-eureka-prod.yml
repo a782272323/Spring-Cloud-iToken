@@ -1,0 +1,5 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.16.253.139:8761/eureka/,http://172.16.253.139:8861/eureka/,http://172.16.253.139:8961/eureka/
