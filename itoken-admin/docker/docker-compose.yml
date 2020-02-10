@@ -1,0 +1,15 @@
+version: '2'
+services:
+  itoken-admin:
+    restart: always
+    image: itoken-admin
+    container_name: itoken-admin
+    ports:
+      - 8084:8084
+    volumes:
+      - /usr/local/docker/itoken-volumes/itoken-admin-volumes
+    networks:
+      - admin_network
+#配置网络
+networks:
+  admin_network:
