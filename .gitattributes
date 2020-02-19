@@ -1,0 +1,5 @@
+*.css linguist-language=java //最后面参数就是要展示的语言
+*.less linguist-language=java
+*.js linguist-language=java
+*.html linguist-language=java
+*.vue linguist-language=java
