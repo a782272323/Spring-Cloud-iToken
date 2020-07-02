@@ -33,7 +33,7 @@
         <!-- Spring Settings End -->
 
         <!-- Environment Settings Begin -->
-        <mysql.version>5.1.46</mysql.version><!-- 数据库版本 -->
+        <mysql.version>8.0.16</mysql.version><!-- 数据库版本 -->
         <lombok.version>1.16.18</lombok.version><!-- Lombok插件版本 author:梁鸿斌 time:2020/2/1 -->
         <guava.version>25.1-jre</guava.version><!-- guava 版本 -->
         <nekohtml.version>1.9.22</nekohtml.version><!-- thymeleaf 的不严格html版本 -->
