@@ -35,7 +35,7 @@
         <!-- Environment Settings Begin -->
         <mysql.version>5.1.46</mysql.version><!-- 数据库版本 -->
         <lombok.version>1.16.18</lombok.version><!-- Lombok插件版本 author:梁鸿斌 time:2020/2/1 -->
-        <guava.version>25.1-jre</guava.version><!-- guava 版本 -->
+        <guava.version>29.0-jre</guava.version><!-- guava 版本 -->
         <nekohtml.version>1.9.22</nekohtml.version><!-- thymeleaf 的不严格html版本 -->
         <jackson.version>2.9.6</jackson.version><!-- json转换，jackson版本 -->
         <fastjson.version>1.2.62</fastjson.version><!-- json转换,FastJson版本 -->
